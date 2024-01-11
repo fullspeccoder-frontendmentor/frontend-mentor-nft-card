@@ -1,0 +1,163 @@
+/* Variables & CSS Reset */
+:root {
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --weight-thin: 300;
+  --weight-norm: 400;
+  --weight-heavy: 600;
+  --text: hsl(215, 51%, 70%);
+  --eth-text: hsl(178, 100%, 50%);
+  --eth-text-transparent: hsla(178, 100%, 50%, 0.5);
+  --main-card-text: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1;
+  font-family: Outfit, serif;
+  color: var(--text);
+  background-color: var(--main-background);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Card Container Styles */
+.card {
+  width: 338px;
+  padding: 1.25rem;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container:hover {
+  cursor: pointer;
+}
+
+.view-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--eth-text-transparent);
+  border-radius: 7px;
+}
+
+.equilibrium-image {
+  width: 100%;
+  border-radius: 7px;
+}
+
+.card-header {
+  font-size: 1.35rem;
+  font-weight: var(--weight-norm);
+  color: var(--main-card-text);
+}
+
+.card-header:hover {
+  color: var(--eth-text);
+  cursor: pointer;
+}
+
+.card-text {
+  line-height: 1.75;
+  font-weight: var(--weight-thin);
+}
+
+.card > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card > div > span {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.eth-text {
+  font-weight: var(--weight-heavy);
+  color: var(--eth-text);
+}
+
+.line {
+  background-color: var(--line);
+  height: 1px;
+}
+
+#profile-container {
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.user-text {
+  color: var(--main-card-text);
+}
+
+.user-text:hover {
+  color: var(--eth-text);
+  cursor: pointer;
+}
+
+/* Miscellaneous Classes For Interactivity */
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
