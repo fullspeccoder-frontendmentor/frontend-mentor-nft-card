@@ -1,0 +1,58 @@
+/* Variables & CSS Reset */
+:root {
+  --main-background: hsl(217, 54%, 11%);
+  --card-background: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --weight-thin: 300;
+  --weight-norm: 400;
+  --weight-heavy: 600;
+  --text: hsl(215, 51%, 70%);
+  --eth-text: hsl(178, 100%, 50%);
+  --eth-text-transparent: hsla(178, 100%, 50%, 0.5);
+  --main-card-text: hsl(0, 0%, 100%);
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1;
+  font-family: Outfit, serif;
+  color: var(--text);
+  background-color: var(--main-background);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
